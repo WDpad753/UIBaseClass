@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="UIBaseClass.Controls.Spinner.SpinnerProgressBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UIBaseClass.Controls.Spinner"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100">
+
+    <!-- Spinner Design (it can be done using Ellipse or Arc Code below using Arc) -->
+    <!-- Use the text document about the path commands in Data. -->
+    <!--<Viewbox>
+
+        --><!-- Arc Movement requirements: (Size, (RotatingAngle, isLargeArc, SweepDirection), Coordinates[End-points]) --><!--
+        <Canvas Width="100" Height="100">-->
+            <!--<Ellipse Width="100" Height="100" Stroke="LightGray" StrokeThickness="10"/>
+            <Path x:Name="progressPath" Stroke="Gold" StrokeThickness="10">
+                <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="50,0">
+                        <ArcSegment Point="50,0" IsLargeArc="True" RotationAngle="0" SweepDirection="Clockwise" Size="50,50"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+            </Path>-->
+            <!--<TextBlock Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Canvas.Left="39" Canvas.Top="37">
+            <Run Text="{Binding Value, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <Run Text="%"/>
+            </TextBlock>-->
+
+            <!-- Spinner Design (it can be done using Ellipse or Arc Code below using Arc) -->
+            <!-- Use the text document about the path commands in Data. -->
+    <Viewbox>
+        <Canvas Width="100" Height="100">
+            <!-- Base Spinner -->
+            <Path Stroke="LightGray" StrokeThickness="3" Fill="LightGray"
+                      Data="M 0 50 a 50,50 0 1 1 100,0 
+                                    a 50,50 0 1 1 -100,0 
+                            M 30 50 a 20,20 0 1 1 40,0
+                                     a 20,20 0 1 1 -40,0" RenderTransformOrigin="0.5,0.5" />
+
+            <!-- Loader Spinner "M 0 100 a 100,100 0 0 1 100,-100 v 30 a 70,70 0 0 0 -70,70" -->
+
+            <Path x:Name="progressPath" Fill="Gold" Data="M 0 50 a 50,50 0 0 1 50,-50 v 30 
+                                              a 20,20 0 0 0 -20,20" RenderTransformOrigin="1,1" >
+            </Path>
+        </Canvas>
+
+    </Viewbox>
+
+</UserControl>

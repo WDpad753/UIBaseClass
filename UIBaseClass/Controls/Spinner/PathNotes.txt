@@ -1,0 +1,23 @@
+﻿Path Commands:
+
+Capital => Absolute (using from origin points)
+Lower => Relative (using the previous points)
+
+M,m => Move Command || imagine you raise a pen and move to a point.
+L,l => Line Command || place pen down and move
+H,h => Horizontal Line Command
+V,v => Vertical line
+S,s => Smooth Bezier Curve
+A,a => Arc
+Z,z => Close
+
+
+Using Arc:
+it uses the following:-
+(Point Size RotationAngle isLargeArc sweepDirection isStroked)
+Point => point where you want the arc to end
+Size => Size of the arc length (arc is basically and ellipse where it has x-size and y-size)
+SweepDirection => you want sweep of the arc to be clockwise or anticlockwise
+
+When using the Arc, it is expecting the following:
+(Size, RotationAngle, IsLargeArc, SweepDirection, Point)
