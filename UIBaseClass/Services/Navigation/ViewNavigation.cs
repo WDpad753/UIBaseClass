@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UIBaseClass.MVVM;
 
-namespace Volunteer_Management_UI.Services.Navigation
+namespace UIBaseClass.Services.Navigation
 {
     public class ViewNavigation : ViewModelBase
     {
