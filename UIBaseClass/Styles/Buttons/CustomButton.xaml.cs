@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UIBaseClass.Controls.StyleCommands;
 
-namespace UIBaseClass.Styles.Butttons
+namespace UIBaseClass.Styles.Buttons
 {
     /// <summary>
     /// Interaction logic for CustomButton.xaml
@@ -22,11 +22,11 @@ namespace UIBaseClass.Styles.Butttons
     public partial class CustomButton : UserControl
     {
         public static readonly DependencyProperty CornerRadiusProperty =
-    DependencyProperty.Register(
-        nameof(CornerRadius),
-        typeof(CornerRadius),
-        typeof(RoundButton),
-        new FrameworkPropertyMetadata(new CornerRadius(0), FrameworkPropertyMetadataOptions.AffectsRender));
+            DependencyProperty.Register(
+                nameof(CornerRadius),
+                typeof(CornerRadius),
+                typeof(CustomButton),
+                new FrameworkPropertyMetadata(new CornerRadius(0), FrameworkPropertyMetadataOptions.AffectsRender));
 
         public CornerRadius CornerRadius
         {
@@ -34,10 +34,22 @@ namespace UIBaseClass.Styles.Butttons
             set => SetValue(CornerRadiusProperty, value);
         }
 
+        public static readonly DependencyProperty ContentProperty =
+            DependencyProperty.Register(
+                nameof(Content),
+                typeof(object),
+                typeof(CustomButton));
+
+        public object Content
+        {
+            get => GetValue(ContentProperty);
+            set => SetValue(ContentProperty, value);
+        }
+
         public CustomButton()
         {
             InitializeComponent();
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(RoundButton), new FrameworkPropertyMetadata(typeof(RoundButton)));
+            //DefaultStyleKeyProperty.OverrideMetadata(typeof(RoundButton), new FrameworkPropertyMetadata(typeof(RoundButton)));
         }
     }
 }
