@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace UIBaseClass.Controls.StyleCommands
 {
-    public class RoundButton : Button
+    public class RoundButton : ButtonBase
     {
         // Register a CornerRadius dependency property
         public static readonly DependencyProperty CornerRadiusProperty =
@@ -16,7 +17,7 @@ namespace UIBaseClass.Controls.StyleCommands
                 nameof(CornerRadius),
                 typeof(CornerRadius),
                 typeof(RoundButton),
-                new FrameworkPropertyMetadata(new CornerRadius(0), FrameworkPropertyMetadataOptions.AffectsRender));
+                new PropertyMetadata(new CornerRadius(0)));
 
         public CornerRadius CornerRadius
         {

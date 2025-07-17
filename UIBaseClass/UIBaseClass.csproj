@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Page Remove="Styles\Buttons\ButtonResources.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="5.2.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.2.1" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
     <PackageReference Include="Prism.Wpf" Version="9.0.537" />
   </ItemGroup>
 

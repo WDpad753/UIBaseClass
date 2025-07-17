@@ -9,15 +9,15 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/UIBaseClass;component/Styles/Buttons/ButtonResources.xaml" />
+                <ResourceDictionary Source="/UIBaseClass;component/Styles/Buttons/Theme/ButtonTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Viewbox>
+    <!--<Viewbox>
         <Grid>
-            <Button Style="{StaticResource CustomButtonStyle}" Background="Red" Tag="2" BorderBrush="DarkGray" Width="50" Height="50">
-            </Button>
+            <Button Style="{}"  Background="Red" BorderBrush="DarkGray" Width="50" Height="50">
+            </>
         </Grid>
-    </Viewbox>
+    </Viewbox>-->
 </UserControl>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace UIBaseClass.MVVM
+namespace UIBaseClass.MVVM.Commands
 {
     public class RelayCommand : ICommand
     {

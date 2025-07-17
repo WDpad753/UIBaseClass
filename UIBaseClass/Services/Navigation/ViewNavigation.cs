@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Navigation;
-using UIBaseClass.MVVM;
+using UIBaseClass.MVVM.ViewBase;
 using UIBaseClass.Services.Navigation.Interface;
 
 namespace UIBaseClass.Services.Navigation

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UIBaseClass.MVVM
+namespace UIBaseClass.MVVM.ViewBase
 {
     //public class ViewModelBase : INotifyPropertyChanged
     //{
