@@ -212,5 +212,10 @@ namespace UIBaseClass.MessageBox
             draggingPopup = true;
             this.DragMove();
         }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
