@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Storyboard x:Key="SlideInStoryboard" FillBehavior="Stop">
+        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+                         From="100" To="0" Duration="0:0:5">
+            <DoubleAnimation.EasingFunction>
+                <QuadraticEase EasingMode="EaseOut"/>
+            </DoubleAnimation.EasingFunction>
+        </DoubleAnimation>
+
+        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                         From="0" To="1" Duration="0:0:5">
+            <DoubleAnimation.EasingFunction>
+                <QuadraticEase EasingMode="EaseOut"/>
+            </DoubleAnimation.EasingFunction>
+        </DoubleAnimation>
+    </Storyboard>
+
+    <Storyboard x:Key="SlideOutStoryboard" FillBehavior="Stop">
+        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+                         From="0" To="100" Duration="0:0:5">
+            <DoubleAnimation.EasingFunction>
+                <QuadraticEase EasingMode="EaseIn"/>
+            </DoubleAnimation.EasingFunction>
+        </DoubleAnimation>
+        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                         From="1" To="0" Duration="0:0:5">
+            <DoubleAnimation.EasingFunction>
+                <QuadraticEase EasingMode="EaseIn"/>
+            </DoubleAnimation.EasingFunction>
+        </DoubleAnimation>
+    </Storyboard>
+
+    <Style x:Key="AnimatedPanelStyle" TargetType="StackPanel">
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TranslateTransform X="0"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Opacity" Value="0"/>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="StackPanel.Loaded">
+                <BeginStoryboard Storyboard="{StaticResource SlideInStoryboard}"/>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
