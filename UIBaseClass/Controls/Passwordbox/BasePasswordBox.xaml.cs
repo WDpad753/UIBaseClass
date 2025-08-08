@@ -26,6 +26,7 @@ namespace UIBaseClass.Controls.Passwordbox
         //    DependencyProperty.Register("Password", typeof(string), typeof(BasePasswordBox),
         //        new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault,
         //            PasswordPropertyChanged, null, false, UpdateSourceTrigger.PropertyChanged));
+
         public static readonly DependencyProperty PasswordProperty =
             DependencyProperty.Register("Password", typeof(string), typeof(BasePasswordBox),
                 new PropertyMetadata(string.Empty, PasswordPropertyChanged));
