@@ -19,4 +19,14 @@
     <PackageReference Include="Prism.Wpf" Version="9.0.537" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Styles\Passwords\Theme\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Styles\Passwords\CustomPasswordBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>
