@@ -7,7 +7,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type CheckBox}">
-                    <Grid>
+                    <Grid VerticalAlignment="Center">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
@@ -16,16 +16,20 @@
                         <BulletDecorator Grid.Column="0" VerticalAlignment="Center">
                             <BulletDecorator.Bullet>
                                 <Border x:Name="Border" Width="16" Height="16" 
-                                    BorderThickness="1" BorderBrush="Black" Background="White">
-                                    <Grid>
+                                    BorderThickness="1" BorderBrush="Black" Background="White" VerticalAlignment="Center">
+                                    <Grid VerticalAlignment="Center">
                                         <!-- Tick -->
                                         <Path x:Name="Tick" Stroke="Green" StrokeThickness="2" 
                                           Visibility="Collapsed"
-                                          Data="M 3 8 L 7 12 L 13 4" SnapsToDevicePixels="True"/>
+                                          Data="M 3 8 L 7 12 L 13 4" SnapsToDevicePixels="True"
+                                          VerticalAlignment="Center" HorizontalAlignment="Center"
+                                          Stretch="Uniform" />
                                         <!-- Cross -->
                                         <Path x:Name="Cross" Stroke="Red" StrokeThickness="2" 
                                           Visibility="Collapsed"
-                                          Data="M 3 3 L 13 13 M 13 3 L 3 13" SnapsToDevicePixels="True"/>
+                                          Data="M 3 3 L 13 13 M 13 3 L 3 13" SnapsToDevicePixels="True"
+                                          VerticalAlignment="Center" HorizontalAlignment="Center"
+                                          Stretch="Uniform" />
                                     </Grid>
                                 </Border>
                             </BulletDecorator.Bullet>
